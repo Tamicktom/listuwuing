@@ -68,6 +68,11 @@ const AuthShowcase: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-4">
+      {
+        sessionData?.user?.image && (
+          <img src={sessionData.user?.image} alt="" />
+        )
+      }
       <p className="text-center text-2xl text-white">
         {sessionData && <span>Logged in as {sessionData.user?.name}</span>}
         {secretMessage && <span> - {secretMessage}</span>}
